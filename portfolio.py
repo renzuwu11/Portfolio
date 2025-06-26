@@ -39,11 +39,11 @@ def send_message():
 
 @app.route("/")
 def home():
-    return redirect(url_for("about-me"))
+    return redirect(url_for("about"))
 
-@app.route("/about-me")
+@app.route("/about")
 def about():
-    return render_template("about-me.html", page="about-me")
+    return render_template("about-me.html", page="about")
 
 @app.route("/resume")
 def resume():
