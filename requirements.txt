@@ -5,3 +5,4 @@ requests==2.31.0               # For handling HTTP requests
 psycopg2-binary==2.9.7         # PostgreSQL adapter
 python-dotenv==1.0.0           # Environment variable management
 gunicorn==21.2.0               # WSGI HTTP server for production
+flask_mail
