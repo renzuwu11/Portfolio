@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'MoreSugar';
+  src: url('../fonts/MoreSugar.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('../fonts/Garet.ttf') format('truetype');
+}
+
+/* Reset default spacing */
+body, main {
+  margin: 0;
+  padding: 0;
+}
+
+.about-container {
+  display: flex;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.about-img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.about-text {
+  position: absolute;
+  top: 100px;
+  right: 70px;
+  max-width: 400px;
+  z-index: 1;
+}
+
+.about-hi {
+  font-family: 'MoreSugar', sans-serif;
+  font-size: 3.625rem;
+  font-weight: 400;
+  color: #475f6f;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.about-intro,
+.about-story {
+  font-family: 'Garet', sans-serif;
+  font-size: 1rem;
+  font-weight: 650;
+  color: black;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.about-float-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -90px;
+}
+
+.about-section-title {
+  font-family: 'MoreSugar', sans-serif;
+  font-size: 3.625rem;
+  font-weight: 400;
+  color: #475f6f;
+  margin: 0;
+  width: 100%;
+  max-width: 405px;
+  text-align: left;
+}
+
+.about-section-body {
+  font-family: 'Garet', sans-serif;
+  font-size: 1rem;
+  font-weight: 650;
+  color: black;
+  line-height: 1.6;
+  margin-top: 20px;
+
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+}
+
+.about-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about-reverse-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-reverse-text {
+  position: absolute;
+  top: 1100px; 
+  left: 70px; 
+  z-index: 1;
+}
+
+.about-reverse-title {
+  font-family: 'MoreSugar', sans-serif;
+  font-size: 3.125rem; /* 50px */
+  font-weight: 400;
+  color: #475f6f;
+  margin: 20px 0;
+  text-align: left;
+  max-width: 430px;
+}
+
+.about-reverse-body {
+  font-family: 'Garet', sans-serif;
+  font-size: 1rem; /* 16px */
+  font-weight: 650;
+  color: black;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 430px;
+}
+
+.bg-deco {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  width: auto;
+  height: auto;
+}
+
+.bg-deco-right {
+  top: 490px;      
+  right: 0px;
+}
+
+.bg-deco-left {
+  top: 730px;   
+  left: 0;
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0; 
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .about-img,
+  .about-reverse-img {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    display: block;
+    position: static;
+    padding: 0;
+  }
+
+  .about-text {
+    position: static;
+    max-width: 100%;
+    margin: 20px 0 0 0;
+    right: unset;
+    top: unset;
+    padding: 0 10px;
+  }
+
+  .about-hi,
+  .about-section-title,
+  .about-reverse-title {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-intro,
+  .about-story,
+  .about-section-body,
+  .about-reverse-body {
+    font-size: 0.98rem;
+    max-width: 100%;
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  .about-float-text {
+    margin-top: 0;
+    padding: 0 10px;
+  }
+
+  .about-reverse {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: static;
+  }
+
+  .about-reverse-text {
+    position: static;
+    left: unset;
+    top: unset;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .bg-deco {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-hi,
+  .about-section-title,
+  .about-reverse-title {
+    font-size: 1.3rem;
+  }
+  .about-img,
+  .about-reverse-img {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+}

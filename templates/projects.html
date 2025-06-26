@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="projects-container">
+  <aside class="project-sidebar">
+    <img src="{{ url_for('static', filename='assets/images/cometal.png') }}" alt="COMET.AL" class="project-logo active" data-project="cometal">
+    <img src="{{ url_for('static', filename='assets/images/memow.png') }}" alt="#memow" class="project-logo" data-project="memow">
+    <img src="{{ url_for('static', filename='assets/images/algoritees.png') }}" alt="Algoritees" class="project-logo" data-project="algoritees">
+    <img src="{{ url_for('static', filename='assets/images/tatak.png') }}" alt="Tatak" class="project-logo" data-project="tatak">
+    <img src="{{ url_for('static', filename='assets/images/syncore.png') }}" alt="Syncore" class="project-logo" data-project="syncore">
+  </aside>
+
+  <!-- Project 1: COMET.AL -->
+  <div class="project-display">
+    <div class="project-card" id="project-cometal">
+      <!-- Left Side -->
+      <div class="project-left">
+        <h2 class="project-title">
+          COMET.AL <span class="project-year">(2024)</span>
+        </h2>
+        <p class="project-sub">E-COMMERCE • Product & Inventory Module | Project Manager & Full-Stack Developer</p>
+
+        <!-- Gallery placeholder -->
+        <div class="gallery-carousel">
+          <span class="carousel-arrow left-arrow">&#10094;</span> <!-- ← (‹) -->
+          
+          <img src="{{ url_for('static', filename='assets/images/cometal-photo1.avif') }}" class="carousel-img active" alt="Gallery Image 1">
+          <img src="{{ url_for('static', filename='assets/images/cometal-photo2.avif') }}" class="carousel-img" alt="Gallery Image 2">
+          <img src="{{ url_for('static', filename='assets/images/cometal-photo3.avif') }}" class="carousel-img" alt="Gallery Image 3">
+          
+          <span class="carousel-arrow right-arrow">&#10095;</span> <!-- → (›) -->
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Right Side -->
+      <div class="project-right">
+        <img src="{{ url_for('static', filename='assets/images/cometal-photoop.png') }}"
+             data-full="{{ url_for('static', filename='assets/images/cometal-photoop2.png') }}"
+             alt="COMET.AL Group Photo" 
+             class="main-photo">
+
+        <p class="description">
+          Welcome to COMET.AL where the spirit of discovery shines brightly. At this shop, we invite you, your friends, and et. al (others) to embark on a journey of exploration and uniqueness. Like comets leaving a trail of wonder, each item in our shop is carefully selected to leave a lasting impression.
+        </p>
+
+        <p class="tech-stack">
+          <em>Tech Stack: PHP Laravel, HTML, JavaScript, CSS, API.</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- Project 2: #MEMOW -->
+    <div class="project-card" id="project-memow" style="display:none;">
+      <!-- Left Side -->
+      <div class="project-left">
+        <h2 class="project-title">
+          #memow <span class="project-year">(2024)</span>
+        </h2>
+        <p class="project-sub">Note Taking Web Application | Project Manager & Full-Stack Developer</p>
+
+        <!-- Gallery placeholder -->
+        <div class="gallery-carousel">
+          <span class="carousel-arrow left-arrow">&#10094;</span>
+          <img src="{{ url_for('static', filename='assets/images/memow-photo1.avif') }}" class="carousel-img active" alt="Gallery Image 1">
+          <img src="{{ url_for('static', filename='assets/images/memow-photo2.avif') }}" class="carousel-img" alt="Gallery Image 2">
+          <img src="{{ url_for('static', filename='assets/images/memow-photo3.avif') }}" class="carousel-img" alt="Gallery Image 3">
+          <img src="{{ url_for('static', filename='assets/images/memow-photo4.avif') }}" class="carousel-img" alt="Gallery Image 4">
+          <img src="{{ url_for('static', filename='assets/images/memow-photo5.avif') }}" class="carousel-img" alt="Gallery Image 5">
+          <span class="carousel-arrow right-arrow">&#10095;</span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Right Side -->
+      <div class="project-right">
+        <img src="{{ url_for('static', filename='assets/images/memow-photoop.png') }}"
+             data-full="{{ url_for('static', filename='assets/images/memow-photoop2.png') }}"
+             alt="MEMOW Group Photo"
+             class="main-photo">
+
+        <p class="description">
+          A cloud-based note-taking platform that allows users to create, read, update, and delete notes within their accounts. Unlike traditional notepad apps, all data is securely stored online, ensuring accessibility from any device with internet. Users can easily manage their notes, making it a convenient tool.
+        </p>
+
+        <p class="tech-stack">
+          <em>Tech Stack: ASP.NET, C#, Microsoft SQL.</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- Project 3: ALGORITEES -->
+    <div class="project-card" id="project-algoritees" style="display:none;">
+      <!-- Left Side -->
+      <div class="project-left">
+        <h2 class="project-title">
+          AlgoriTees <span class="project-year">(2024)</span>
+        </h2>
+        <p class="project-sub">E-COMMERCE • Shopping Cart & Checkout Module | Quality Assurance & Documentation Analyst</p>
+
+        <!-- Gallery placeholder -->
+        <div class="gallery-carousel">
+          <span class="carousel-arrow left-arrow">&#10094;</span>
+          <img src="{{ url_for('static', filename='assets/images/algoritees-photo1.png') }}" class="carousel-img active" alt="Gallery Image 1">
+          <img src="{{ url_for('static', filename='assets/images/algoritees-photo2.png') }}" class="carousel-img" alt="Gallery Image 2">
+          <img src="{{ url_for('static', filename='assets/images/algoritees-photo3.png') }}" class="carousel-img" alt="Gallery Image 3">
+          <img src="{{ url_for('static', filename='assets/images/algoritees-photo4.png') }}" class="carousel-img" alt="Gallery Image 4">
+          <img src="{{ url_for('static', filename='assets/images/algoritees-photo5.png') }}" class="carousel-img" alt="Gallery Image 5">
+          <img src="{{ url_for('static', filename='assets/images/algoritees-photo6.png') }}" class="carousel-img" alt="Gallery Image 6">
+          <img src="{{ url_for('static', filename='assets/images/algoritees-photo7.png') }}" class="carousel-img" alt="Gallery Image 7">
+          <span class="carousel-arrow right-arrow">&#10095;</span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Right Side -->
+      <div class="project-right">
+        <img src="{{ url_for('static', filename='assets/images/algoritees-photoop.png') }}"
+             data-full="{{ url_for('static', filename='assets/images/algoritees-photoop2.png') }}"
+             alt="ALGORITEES Group Photo"
+             class="main-photo">
+
+        <p class="description">
+          Algoritees is a custom t-shirt eCommerce website where users can create and order personalized shirt designs. The name comes from a clever mix of "algorithms" and "tees," reflecting both creativity and tech. Algoritees makes custom shirt design simple and fun for everyone.
+        </p>
+
+        <p class="tech-stack">
+          <em>Tech Stack: PHP, HTML, CSS, JavaScript, Python</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- Project 4: TATAK -->
+    <div class="project-card" id="project-tatak" style="display:none;">
+      <!-- Left Side -->
+      <div class="project-left">
+        <h2 class="project-title">
+          TATAK <span class="project-year">(2024)</span>
+        </h2>
+        <p class="project-sub">Business Name & Logo Generator | Project Manager & Full-Stack Developer</p>
+
+        <!-- Gallery placeholder -->
+        <div class="gallery-carousel">
+          <span class="carousel-arrow left-arrow">&#10094;</span>
+          <img src="{{ url_for('static', filename='assets/images/tatak-photo1.avif') }}" class="carousel-img active" alt="Gallery Image 1">
+          <img src="{{ url_for('static', filename='assets/images/tatak-photo2.avif') }}" class="carousel-img" alt="Gallery Image 2">
+          <img src="{{ url_for('static', filename='assets/images/tatak-photo3.avif') }}" class="carousel-img" alt="Gallery Image 3">
+          <img src="{{ url_for('static', filename='assets/images/tatak-photo4.avif') }}" class="carousel-img" alt="Gallery Image 4">
+          <img src="{{ url_for('static', filename='assets/images/tatak-photo5.avif') }}" class="carousel-img" alt="Gallery Image 5">
+          <span class="carousel-arrow right-arrow">&#10095;</span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Right Side -->
+      <div class="project-right">
+        <img src="{{ url_for('static', filename='assets/images/tatak-photoop.png') }}"
+             data-full="{{ url_for('static', filename='assets/images/tatak-photoop2.png') }}"
+             alt="TATAK Group Photo"
+             class="main-photo">
+
+        <p class="description">
+          A web-based tool that helps entrepreneurs generate unique business names and custom logos. Uses PyNamelix, an intelligent name-generation algorithm, to create brand identities tailored to different industries. Tatak simplifies the process of branding, making it accessible for startups.
+        </p>
+
+        <p class="tech-stack">
+          <em>Tech Stack: Python, HTML, CSS, JavaScript, PyNamelix (library).</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- Project 5: SYNCORE -->
+    <div class="project-card" id="project-syncore" style="display:none;">
+      <!-- Left Side -->
+      <div class="project-left">
+        <h2 class="project-title">
+          Syncore <span class="project-year">(2025)</span>
+        </h2>
+        <p class="project-sub">Healthcare Finance Management System | Project Manager & Full-Stack Developer</p>
+
+        <!-- Gallery placeholder -->
+        <div class="gallery-carousel">
+          <span class="carousel-arrow left-arrow">&#10094;</span>
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo1.avif') }}" class="carousel-img active" alt="Gallery Image 1">
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo2.jpeg') }}" class="carousel-img" alt="Gallery Image 2">
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo3.jpeg') }}" class="carousel-img" alt="Gallery Image 3">
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo4.avif') }}" class="carousel-img" alt="Gallery Image 4">
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo5.avif') }}" class="carousel-img" alt="Gallery Image 5">
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo6.avif') }}" class="carousel-img" alt="Gallery Image 6">
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo7.avif') }}" class="carousel-img" alt="Gallery Image 7">
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo8.avif') }}" class="carousel-img" alt="Gallery Image 8">
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo9.avif') }}" class="carousel-img" alt="Gallery Image 9">
+          <img src="{{ url_for('static', filename='assets/images/syncore-photo10.avif') }}" class="carousel-img" alt="Gallery Image 10">
+          <span class="carousel-arrow right-arrow">&#10095;</span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Right Side -->
+      <div class="project-right">
+        <img src="{{ url_for('static', filename='assets/images/syncore-photoop.png') }}"
+             data-full="{{ url_for('static', filename='assets/images/syncore-photoop2.png') }}"
+             alt="TATAK Group Photo"
+             class="main-photo">
+
+        <p class="description">
+          A financial management system designed for hospitals, handling billing, invoices, insurance processing, and resource allocation for hospital services and rooms. Ensures efficient financial tracking and seamless integration with healthcare operations to improve patient care and efficiency.
+        </p>
+
+        <p class="tech-stack">
+          <em>Tech Stack: Python, HTML, CSS, JavaScript, MY SQL</em>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="image-modal" class="image-modal">
+    <span class="image-close">&times;</span>
+    <span class="modal-arrow modal-left">&#10094;</span>
+    <span class="modal-arrow modal-right">&#10095;</span>
+    <img class="image-modal-content" id="modal-image">
+  </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+{% endblock %}
+

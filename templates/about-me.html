@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}About Me{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about-me.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Floating background images -->
+<img src="{{ url_for('static', filename='assets/images/about-me3.png') }}" alt="" class="bg-deco bg-deco-right">
+<img src="{{ url_for('static', filename='assets/images/about-me4.png') }}" alt="" class="bg-deco bg-deco-left">
+
+<main class="about-container">
+  <img src="{{ url_for('static', filename='assets/images/about-me1.png') }}" alt="About Me" class="about-img">
+  
+  <div class="about-text">
+    <h1 class="about-hi">Hi hi!</h1>
+
+    <p class="about-intro">
+      I’m Renz — a curious, hands-on, and slightly all-over-the-place kind of tech enthusiast (in the best way possible).
+    </p>
+
+    <p class="about-story">
+      Back in university at PUP Quezon City, I started out with a passion for design — UI/UX caught my eye first. But that was just the beginning. I eventually found myself diving into frontend, backend, and everything in between — which led me to become a full-stack developer...
+    </p>
+  </div>
+</main>
+
+<div class="about-float-text">
+  <h1 class="about-section-title">Not long after,</h1>
+  <p class="about-section-body">
+    I tried on the hat of a Project Manager, leading teams, writing documentation, and keeping things on track. Then came Quality Assurance, where I discovered the thrill of catching bugs, writing test cases, and ensuring things actually work the way they’re supposed to. I even explored cybersecurity, competing in capture-the-flag challenges and learning tools that opened up a whole new world.
+  </p>
+</div>
+
+<div class="about-reverse">
+<img src="{{ url_for('static', filename='assets/images/about-me2.png') }}" alt="About Me 2" class="about-reverse-img">
+  <div class="about-reverse-text">
+    <p class="about-reverse-body">
+      You could say I’ve been everywhere — and I mean that in the best way. Each role taught me something new, but one stood out the most:
+    </p>
+    <h1 class="about-reverse-title">Quality Assurance</h1>
+    <p class="about-reverse-body">
+      While often seen as the quiet, behind-the-scenes role, I see QA as the glue that holds great projects together. Testing, documentation, debugging — it all matters. And I genuinely enjoy doing it.
+    </p>
+    <p class="about-reverse-body">
+      Welcome to my portfolio — a little corner of the web that shows where I’ve been, what I’ve built, and what I love doing.
+    </p>
+  </div>
+</div>
+{% endblock %}

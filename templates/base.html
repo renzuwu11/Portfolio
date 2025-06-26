@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}My Portfolio{% endblock %}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/icons/logo2.png') }}">
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+
+  <!-- Page-specific CSS -->
+  {% block extra_css %}{% endblock %}
+</head>
+<body style="background-color: #f0d7c1; margin: 0; padding: 0;">
+
+  {% include 'components/header.html' %}
+
+  {% block content %}{% endblock %}
+
+  {% include 'components/footer.html' %}
+
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

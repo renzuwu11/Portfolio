@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="logo">
+    <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Logo">
+  </div>
+  <nav class="navbar">
+    <a href="{{ url_for('about') }}" class="nav-link {% if page == 'about' %}active{% endif %}">About Me</a>
+    <a href="{{ url_for('resume') }}" class="nav-link {% if page == 'resume' %}active{% endif %}">Resume</a>
+    <a href="{{ url_for('projects') }}" class="nav-link {% if page == 'projects' %}active{% endif %}">Projects</a>
+    <a href="{{ url_for('contact') }}" class="nav-link {% if page == 'contact' %}active{% endif %}">Contact</a>
+  </nav>
+  <div class="burger" id="burger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<script src="{{ url_for('static', filename='js/header.js') }}"></script>

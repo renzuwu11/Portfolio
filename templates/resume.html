@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Resume{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resume.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="resume-container">
+  <img src="{{ url_for('static', filename='assets/images/resume.png') }}" alt="Resume" class="resume-img">
+
+  <h1 class="resume-text">
+    Check out my 
+    <a href="#" class="resume-link" id="show-resume">Résumé!</a>
+  </h1>
+</main>
+<div id="resume-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <iframe 
+      src="{{ url_for('static', filename='assets/files/renz-paul-fababeir-resume.pdf') }}" 
+      width="100%" 
+      height="600px" 
+      style="border: none;">
+    </iframe>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/resume.js') }}"></script>
+{% endblock %}

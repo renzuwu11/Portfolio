@@ -1,0 +1,244 @@
+@font-face {
+  font-family: 'MoreSugar';
+  src: url('../fonts/MoreSugar.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('../fonts/Garet.ttf') format('truetype');
+}
+
+/* Reset default spacing */
+body, main {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  padding: 3rem 2rem;
+  background-color: #f0d7c1;
+  font-family: 'Garet', sans-serif;
+  height: calc(100vh - 247px);
+}
+
+.contact-heading {
+  text-align: center;
+  font-family: 'MoreSugar', cursive;
+  font-size: 1.75rem; /* 28px */
+  color: #475f6f;
+  margin-bottom: 2rem;
+  margin-top: 10px;
+}
+
+.contact-content {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-left {
+  flex: 1;
+  max-width: 500px;
+  margin-top: -20px;
+}
+
+.contact-message {
+  font-size: 1rem; /* 16px */
+  font-weight: 650;
+  color: black;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-weight: 650;
+}
+
+.contact-info img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-socials img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.contact-socials img:hover {
+  transform: scale(1.1);
+}
+
+
+.contact-form {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* For Full Name & Email - inline */
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-row label {
+  min-width: 100px;
+  font-weight: 650;
+  font-size: 1rem;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 0.4rem;
+  border: 1px solid #2c4c63;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Garet', sans-serif;
+  background-color: transparent;
+  color: black;
+}
+
+/* For message textarea - stacked */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-group label {
+  font-weight: 650;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  padding: 0.4rem;
+  border: 1px solid #2c4c63;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Garet', sans-serif;
+  background-color: transparent;
+  color: black;
+  resize: vertical;
+}
+
+/* Button styling */
+.contact-form button {
+  align-self: center;
+  padding: 0.48rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #2c4c63;
+  background-color: transparent;
+  color: #2c4c63;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #2c4c63;
+  color: white;
+}
+
+/* SweetAlert2 Custom Styling */
+.swal2-popup {
+  font-family: 'Garet', sans-serif !important;
+  color: black;
+}
+
+.swal2-title,
+.swal2-html-container {
+  color: black !important;
+}
+
+.swal2-confirm,
+.swal2-cancel,
+.swal2-deny {
+  border: 2px solid #2c4c63 !important;
+  color: #2c4c63 !important;
+  background-color: transparent !important;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  font-family: 'Garet', sans-serif !important;
+}
+
+.swal2-confirm:hover,
+.swal2-cancel:hover,
+.swal2-deny:hover {
+  background-color: #2c4c63 !important;
+  color: white !important;
+}
+
+@media (max-width: 700px) {
+  .contact-container {
+    padding: 1.2rem 0.5rem;
+    height: auto;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+  }
+
+  .contact-left,
+  .contact-form {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .divider-line {
+    display: none;
+  }
+
+  .contact-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-socials {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .contact-socials img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .form-row label {
+    min-width: unset;
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 0.6rem 0;
+    font-size: 1rem;
+  }
+}

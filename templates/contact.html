@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="contact-container">
+  <h1 class="contact-heading">Let's squash some bugs together!</h1>
+
+  <div class="contact-content">
+    <!-- Left Side -->
+    <div class="contact-left">
+      <p class="contact-message">
+        I love breaking things (gently) and making sure everything works perfectly before launch.
+        Whether it’s testing websites, writing clean test cases, or helping debug that one pesky issue,
+        I’m your person. Drop me a message — no bug report required!
+      </p>
+
+      <div class="contact-info">
+        <p><img src="/static/assets/icons/email.png" alt="Email"> renzpaul.fababeir01@gmail.com</p>
+        <p><img src="/static/assets/icons/phone.png" alt="Phone"> 0968 689 3132</p>
+        <p><img src="/static/assets/icons/location.png" alt="Location"> Bagong Silang, Caloocan City. Philippines</p>
+      </div>
+
+      <div class="contact-socials">
+        <a href="https://www.facebook.com/renzpaul.fababeir.1" target="_blank" rel="noopener">
+          <img src="/static/assets/icons/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/ruwu.py/" target="_blank" rel="noopener">
+          <img src="/static/assets/icons/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/renz-paul-fababeir-885227248" target="_blank" rel="noopener">
+          <img src="/static/assets/icons/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/renzuwu11" target="_blank" rel="noopener">
+          <img src="/static/assets/icons/github.png" alt="GitHub">
+        </a>
+        <a href="https://discord.com/users/746711928419778620" target="_blank" rel="noopener">
+          <img src="/static/assets/icons/discord.png" alt="Discord">
+        </a>
+      </div>  
+    </div>
+
+    <!-- Divider -->
+    <div class="divider-line"></div>
+
+    <!-- Right Side -->
+    <form class="contact-form">
+      <div class="form-row">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email<span style="color: #2c4c63">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endblock %}

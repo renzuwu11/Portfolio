@@ -1,0 +1,411 @@
+@font-face {
+  font-family: 'MoreSugar';
+  src: url('../fonts/MoreSugar.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('../fonts/Garet.ttf') format('truetype');
+}
+
+/* Reset default spacing */
+body, main {
+  margin: 0;
+  padding: 0;
+}
+
+.projects-container {
+  display: flex;
+  height: calc(100vh - 151px); /* 110px header + 40px footer */
+  background-color: #f0d7c1;
+  font-family: 'Garet', sans-serif;
+}
+
+.project-sidebar {
+  width: 100px;
+  background-color: #f0d7c1;
+  padding-left: 70px;
+  
+  /* Vertical centering fix */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-logo {
+  width: 80px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.project-logo:hover {
+  opacity: 1;
+}
+
+.project-logo.active {
+  opacity: 1;
+}
+
+.project-display {
+  flex-grow: 1;
+  padding-right: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card {
+  display: flex;
+  width: 1000px;
+  height: 430px;
+  border: 1px solid #2c4c63;
+  border-radius: 15px;
+  padding: 25px;
+  font-family: 'Garet', sans-serif;
+  color: #2c4c63;
+  background-color: transparent;
+  gap: 25px;
+  box-sizing: border-box;
+}
+
+.project-left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.project-title {
+  font-family: 'MoreSugar', sans-serif;
+  color: #475f6f;
+  font-size: 1.675rem;
+  margin: 0;
+  margin-bottom: -8px;
+  margin-top: -5px;
+}
+
+.project-year {
+  font-size: 1.05rem;
+  margin-bottom: -8px;
+}
+
+.project-sub{
+  font-family: 'Garet', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 650;
+  color: black;
+  margin: 0;
+  margin-bottom: -5px;
+}
+
+.gallery {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* Divider line */
+.divider {
+  width: 1px;
+  background-color: #2c4c63;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.gallery-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-images {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #2c4c63;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.gallery-nav.left {
+  left: -5px;
+}
+
+.gallery-nav.right {
+  right: -5px;
+}
+
+.gallery-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.carousel-img.active {
+  display: block;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #2c4c63;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+
+/* Right section */
+.project-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.project-right .description,
+.project-right .tech-stack {
+  text-align: justify;
+  font-family: 'Garet', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 650;
+  color: black;
+  margin-top: 5px;
+}
+
+.description{
+  margin-bottom: -5px;
+}
+
+.main-photo {
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal-content {
+  max-width: 70w;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+.image-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #f0d7c1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.modal-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: #f0d7c1;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10001;
+  transform: translateY(-50%);
+}
+
+.modal-left {
+  left: 30px;
+}
+
+.modal-right {
+  right: 30px;
+}
+
+@media (max-width: 1100px) {
+  .project-card {
+    width: 95vw;
+    height: auto;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+  .project-left, .project-right {
+    width: 100%;
+    max-width: 100%;
+  }
+  .divider {
+    display: none;
+  }
+  .gallery-carousel {
+    max-width: 100%;
+    height: 250px;
+  }
+  .main-photo {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-container {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+  }
+  .project-sidebar {
+    flex-direction: row;
+    width: 100vw;
+    padding: 10px 0 10px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: #f0d7c1;
+  }
+  .project-logo {
+    width: 55px;
+    margin: 0 5px;
+  }
+  .project-display {
+    padding: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .project-card {
+    width: 98vw;
+    min-width: 0;
+    padding: 10px;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .project-left {
+    flex: 2 1 0%;
+    min-height: 220px;
+  }
+  .project-right {
+    flex: 1 1 0%;
+    min-height: 100px;
+  }
+  .gallery-carousel {
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    width: 100vw;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 8px;
+  }
+  .project-title {
+    font-size: 1.1rem;
+  }
+  .project-year {
+    font-size: 0.9rem;
+  }
+  .project-sub,
+  .project-right .description,
+  .project-right .tech-stack {
+    font-size: 0.7rem;
+  }
+  .gallery-carousel {
+    height: 110px;
+    max-width: 100vw;
+  }
+  .carousel-img {
+    border-radius: 8px;
+  }
+  .main-photo {
+    border-radius: 8px;
+  }
+  .project-logo {
+    width: 38px;
+  }
+  .project-left {
+    min-height: 140px;
+  }
+  .project-right {
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-card {
+    width: 100vw;
+    padding: 2px;
+    gap: 2px;
+  }
+  .gallery-carousel {
+    height: 70px;
+  }
+}
